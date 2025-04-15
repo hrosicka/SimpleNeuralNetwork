@@ -1,5 +1,7 @@
 # Simple Neural Network
 
+This is a useful and understandable repository for those who want to learn the basics of neural networks by implementing them "from scratch" in Python.
+
 This repository contains a simple feedforward neural network implemented in Python using the NumPy library. The network has one hidden layer and utilizes the sigmoid activation function.
 
 ## Overview

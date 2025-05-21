@@ -1,5 +1,11 @@
 # Simple Neural Network
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Last Commit](https://img.shields.io/github/last-commit/hrosicka/SimpleNeuralNetwork)
+![Issues](https://img.shields.io/github/issues/hrosicka/SimpleNeuralNetwork)
+![Repo Size](https://img.shields.io/github/repo-size/hrosicka/SimpleNeuralNetwork)
+
 This is a useful and understandable repository for those who want to learn the basics of neural networks by implementing them "from scratch" in Python.
 
 This repository contains a simple feedforward neural network implemented in Python using the NumPy library. The network has one hidden layer and utilizes the sigmoid activation function.

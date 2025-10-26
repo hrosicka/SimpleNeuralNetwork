@@ -1,5 +1,6 @@
 # Simple Neural Network
 
+![Stars](https://img.shields.io/github/stars/hrosicka/SimpleNeuralNetwork)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Last Commit](https://img.shields.io/github/last-commit/hrosicka/SimpleNeuralNetwork)

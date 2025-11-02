@@ -11,6 +11,14 @@ This is a useful and understandable repository for those who want to learn the b
 
 This repository contains a simple feedforward neural network implemented in Python using the NumPy library. The network has one hidden layer and utilizes the sigmoid activation function.
 
+## 🧭 Table of Contents
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [Files](#files)
+  - [Notes](#notes)
+  - [Author](#author)
+  - [License](#license)
+
 ## Overview
 
 The `SimpleNeuralNetwork` class provides a basic implementation of a neural network suitable for learning simple patterns. It includes methods for initialization, forward propagation, backward propagation, training, and prediction.
@@ -39,3 +47,9 @@ This is a very basic implementation of a neural network for educational purposes
 The number of training iterations and the size of the hidden layer can significantly impact the network's ability to learn. These parameters can be adjusted to improve performance.
 
 The learning rate in the backward_propagation method is set to a fixed value of 0.1. In more advanced implementations, the learning rate might be adjusted dynamically during training.
+
+## Author
+Lovingly crafted by [Hanka Robovska](https://github.com/hrosicka) 👩‍🔬
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details. Free to use, modify, and distribute as needed.

@@ -5,7 +5,7 @@ class SimpleNeuralNetwork:
     A basic feedforward neural network with one hidden layer.
     It uses the sigmoid activation function.
     """
-    def __init__(self, input_size, hidden_size, output_size):
+    def __init__(self, input_size, hidden_size, output_size, learning_rate=0.1):
         """
         Initializes the neural network with specified layer sizes and random weights.
 
@@ -26,6 +26,7 @@ class SimpleNeuralNetwork:
         self.bias_hidden = np.zeros((1, hidden_size))
         self.weights_hidden_output = np.random.rand(hidden_size, output_size) - 0.5
         self.bias_output = np.zeros((1, output_size))
+        self.learning_rate = learning_rate
 
     def sigmoid(self, x):
         """
@@ -87,11 +88,10 @@ class SimpleNeuralNetwork:
         hidden_delta = hidden_error * self.sigmoid_derivative(self.hidden_layer_output)
 
         # Update weights and biases
-        learning_rate = 0.1
-        self.weights_hidden_output += self.hidden_layer_output.T.dot(output_delta) * learning_rate
-        self.bias_output += np.sum(output_delta, axis=0, keepdims=True) * learning_rate
-        self.weights_input_hidden += input_data.reshape(1, -1).T.dot(hidden_delta) * learning_rate
-        self.bias_hidden += np.sum(hidden_delta, axis=0, keepdims=True) * learning_rate
+        self.weights_hidden_output += self.hidden_layer_output.T.dot(output_delta) * self.learning_rate
+        self.bias_output += np.sum(output_delta, axis=0, keepdims=True) * self.learning_rate
+        self.weights_input_hidden += input_data.reshape(1, -1).T.dot(hidden_delta) * self.learning_rate
+        self.bias_hidden += np.sum(hidden_delta, axis=0, keepdims=True) * self.learning_rate
 
     def train(self, inputs, targets, num_iterations):
         """

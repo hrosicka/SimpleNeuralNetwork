@@ -87,8 +87,7 @@ class SimpleNeuralNetwork:
         # Error of the output layer
         output_error = target - self.output
         output_delta = output_error * self.sigmoid_derivative(self.output)
-
-        # Error of the hidden layer
+        
         hidden_error = output_delta.dot(self.weights_hidden_output.T)
         hidden_delta = hidden_error * self.sigmoid_derivative(self.hidden_layer_output)
 

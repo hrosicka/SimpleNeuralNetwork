@@ -30,7 +30,8 @@ class SimpleNeuralNetwork:
 
     def sigmoid(self, x):
         """
-        The sigmoid activation function.
+        Numerically stable sigmoid activation function.
+        Prevents overflow for large negative values of x.
 
         Args:
             x (numpy.ndarray): The input to the sigmoid function.
@@ -38,7 +39,11 @@ class SimpleNeuralNetwork:
         Returns:
             numpy.ndarray: The output of the sigmoid function, between 0 and 1.
         """
-        return 1 / (1 + np.exp(-x))
+        return np.where(
+            x >= 0,
+            1 / (1 + np.exp(-x)),
+            np.exp(x) / (1 + np.exp(x))
+        )
 
     def sigmoid_derivative(self, x):
         """
